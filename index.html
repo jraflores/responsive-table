@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Responsive Tables</title>
+
+  <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <link href="site.all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h4>Responsive Table Examples</h4>
+    <p>Table layout changes based on screen size for mobile readiness. Prototypes for tables are often always
+      designed for full screen. But how should a table look on moblie devices?
+    </p>
+    <p>One design solution is to display rows vertically when the screen width is smaller. Resize your browser to
+      see this demo in action.
+    </p>
+    <p>Inspired by: https://codepen.io/team/css-tricks/pen/wXgJww?editors=1100</p>
+    <p>Added:
+      <ul>
+        <li>Reusability</li>
+        <li>Summation Header</li>
+        <li>Cusomized Styling</li>
+        <li>Low signature, your table looks exactly the same on full screen</li>
+        <li>Works with any existing CSS framework (Bootstrap, Material, etc.)</li>
+      </ul>
+    </p>
+
+    <h4>Example 1</h4>
+    <p>basic table</p>
+    <table class="table table-hover responsiveTable" id="example1">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Location</th>
+          <th>Department</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+          <td>(312)555-5555</td>
+          <td>Corp. Headquarters</td>
+          <td>Accounting</td>
+          <td><i class="fas fa-check active"></i></td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+          <td>(555)333-4444</td>
+          <td>NY Office</td>
+          <td>Engineering</td>
+          <td><i class="fas fa-check active"></i></td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+          <td>(213)789-4563</td>
+          <td>Chicago Office</td>
+          <td>Operations</td>
+          <td><i class="fas fa-times inactive"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Example 2</h4>
+    <p>table with summation at the top</p>
+    <table class="table table-hover responsiveTable" id="example2">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction Type</th>
+          <th>Amount</th>
+          <th>Fees</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>$160.91</th>
+          <th>$5.22</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/01/2018</td>
+          <td>Charge</td>
+          <td>$54.25</td>
+          <td>$1.23</td>
+        </tr>
+        <tr>
+          <td>10/15/2018</td>
+          <td>Charge</td>
+          <td>$67.01</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>11/25/2018</td>
+          <td>Charge</td>
+          <td>$39.65</td>
+          <td>$0.99</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h4>Example 3</h4>
+    <p>Adding custom styling when on a smaller screen</p>
+    <table class="table table-hover responsiveTable" id="example3">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction Type</th>
+          <th>Amount</th>
+          <th>Fees</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>$160.91</th>
+          <th>$5.22</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/01/2018</td>
+          <td>Charge</td>
+          <td>$54.25</td>
+          <td>$1.23</td>
+        </tr>
+        <tr>
+          <td>10/15/2018</td>
+          <td>Charge</td>
+          <td>$67.01</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>11/25/2018</td>
+          <td>Charge</td>
+          <td>$39.65</td>
+          <td>$0.99</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<!-- Bootstrap core JavaScript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="site.all.js"></script> 
+<script type="text/javascript">
+  (()=>{
+    // to match styling of the table when full screen
+    let headerStyle = 'font-weight: 700; background-color: #ededed; color: #212529';
+
+    // basic table
+    let headers1 = ['First Name', 'Last Name', 'Email', 'Phone', 'Location', 'Department', 'Status'];
+    toResponsive('example1', headers1, headerStyle );
+
+    // apply responsive table to example2 with summation on columns 3 and 4
+    let headers2 = ['Date', 'Transaction Type', 'Amount', 'Fees'];
+    toResponsive('example2', headers2, headerStyle, {show: [3,4], hide: [1,2]} );
+
+    // apply responsive table to example3 with passing styling
+    let headers3 = ['Date', 'Transaction Type', 'Amount', {label:'Fees', css: 'color: red'} ];
+    toResponsive('example3', headers3, headerStyle, {show: [3,4], hide: [1,2]} );
+  })();
+</script>
+
+</html>

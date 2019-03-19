@@ -1,0 +1,65 @@
+
+table thead th {
+  background-color: #ededed;
+}
+
+.active {
+  color: green; 
+}
+
+.inactive {
+  color: red;
+}
+
+/** 600px or less**/
+@media only screen and (max-width: 600px) {
+  table.responsiveTable,
+  tbody,
+  tr,
+  td {
+    display: block;
+  }
+
+  table.responsiveTable thead {
+    display: none;
+  }
+
+  table.responsiveTable tbody tr,
+  table.responsiveTable thead tr:last-child {
+    display: block;
+    overflow-y: hidden;
+    margin: 2px;
+    height: inherit;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow:
+      0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+      0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+
+  table.responsiveTable tbody tr td,
+  table.responsiveTable thead tr:last-child th {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  table.responsiveTable tbody tr td:before,
+  table.responsiveTable thead tr:last-child th:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 45%;
+    padding-top: inherit;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: inherit;
+    white-space: nowrap;
+  }
+}
